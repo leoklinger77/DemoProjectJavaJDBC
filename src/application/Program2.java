@@ -30,7 +30,13 @@ public class Program2 {
 		int id = sc.nextInt();
 		departmentDao.deleteById(id);
 		System.out.println("Delete Completed");
-
+		
+		
+		System.out.println("\n=== TEST 4: Department update ====");
+		Department department = departmentDao.findById(1);
+		department.setName("KLINGER OLIVEIRA");
+		departmentDao.update(department);
+		System.out.println("Update Completed");
 		
 		sc.close();
 	}
